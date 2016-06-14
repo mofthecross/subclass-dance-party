@@ -26,17 +26,34 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
 }
 
-.slowDancer{
+.catDancer{
+  position: relative;
+  animation-name: wobble;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 .snoopDancer{
-  border-radius: 100px;
-  width: 200px;
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
 }
 
 .putinDancer{
-  border-radius: 40px;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+}
 
+/* animation classes */
+
+.bounceClass {
+  animation-name: bounce;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }

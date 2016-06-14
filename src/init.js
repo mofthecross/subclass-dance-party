@@ -28,19 +28,33 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+    window.dancers.push(dancer.$node);
   });
 
 
   $('.lineUp').on('click', function(event) {
 
-    for (var i = 0; i < window.dancers.length; i++) {
-      console.log('hi' + i)
-      window.dancers[i].lineUp();
-    }
-
-
+    window.dancers.forEach(function(item) {
+      $(item).css({right: '50%'});
+    });
   });
 
+// changing background
+
+  $('.disco').on('click', function() {
+    $('body').css({'background-image': ' url("http://i277.photobucket.com/albums/kk45/men_of_fire/DISCO.gif")'});
+  });
+
+// //make dancer interact with each other;
+// $('interact').on('click', function() {
+//   var index = []
+//   var generateRandomIndex = function() {
+//     var generate = Math.floor(Math.random() * window.dancers.length + 1)
+//     index !== generate ? index = generate : index = generate++;
+//   }
+//   var dancer1 = window.dancers[randomIndex];
+//   var dancer2 = window.dancers[ramdomIndex];
+//   for (var i = 0; i < window.dancers.length; i+2)
+// })
 
 });
-

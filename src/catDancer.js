@@ -12,6 +12,7 @@ catDancer.prototype = Object.create(makeDancer.prototype);
 // so we must keep a copy of the old version of this function
 
 catDancer.prototype.constructor = catDancer;
+
 catDancer.prototype.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
   makeDancer.prototype.step.call(this);
