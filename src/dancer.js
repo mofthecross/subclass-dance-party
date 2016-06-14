@@ -22,3 +22,12 @@ makeDancer.prototype.setPosition = function(top, left) {
   this.$node.css(styleSettings);
 };
 
+makeDancer.prototype.lineUp = function() {
+  var lineSettings = {
+    bottom: '0px',
+    left: auto,
+    right: auto
+  };
+
+  this.$node.css(lineSettings);
+};

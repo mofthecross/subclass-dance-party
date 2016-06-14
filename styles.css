@@ -1,9 +1,14 @@
 body, html{
   height:100%;
+
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url("http://i52.tinypic.com/23s7tl0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+");
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -21,7 +26,17 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
-  position:absolute;
+}
+
+.slowDancer{
+}
+
+.snoopDancer{
+  border-radius: 100px;
+  width: 200px;
+}
+
+.putinDancer{
+  border-radius: 40px;
+
 }
