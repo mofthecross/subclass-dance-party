@@ -1,7 +1,9 @@
 var putinDancer = function(top, left, timeBetweenSteps) {
-  makeDancer.apply(this, arguments);
+  this.top = top;
+  this.left = left;
+  this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<img class="putinDancer dancer" src ="https://lh6.googleusercontent.com/-UsIw4WQLtJ0/VGNIWkWql7I/AAAAAAAARMc/NDu7vQo2LLk/w506-h750/putin.gif"></img> ');
-
+  makeDancer.call(this, top, left, timeBetweenSteps);
 };
 
 putinDancer.prototype = Object.create(makeDancer.prototype);
@@ -19,7 +21,7 @@ putinDancer.prototype.step = function() {
     // other effects you can use on a jQuery-wrapped html tag.
   // this.$node.animate({height: '500px'});
 
-  // this.$node.slideDown();
+  // this.$node.toggle();
 
 
 };

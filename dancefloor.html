@@ -2,8 +2,11 @@
 <html>
   <head>
     <title>Object Dance Party</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    
     <link rel="stylesheet" type="text/css" href="animate.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="justified-nav.css">
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/snoopDogDancer.js"></script>
@@ -11,14 +14,20 @@
     <script src="src/putinDancer.js"></script>
   </head>
   <body>
-    <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="snoopDogDancer">add a Snoop dancer</a> 
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="catDancer">add a kitty dancer</a>    
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="putinDancer">add a Putin dancer</a>
-      <button class="lineUp" data-dancer-maker-function-name="lineDancersUp">Line up dancers</button>
-      <button class="disco" data-dancer-maker-function-name="changeToDisco">changeBG</button>
-      <button class="interact" data-dancer-maker-function-name="changeToDisco">make dancer interact</button>
+  <div class ="container">
+       <div class="masthead">
+          <h3 class="text-muted">Politican Dance Party</h3>
+          <nav>
+            <ul class="nav nav-justified">
+              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="snoopDogDancer">add a Snoop dancer</a></li>
+              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="catDancer">add a kitty dancer</a></li>
+              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="putinDancer">add a Putin dancer</a></li>
+              <li><a href="#" class="button lineUp">Line up </a></li> 
+              <li><a href="#" class="button disco">change BG</a></li> 
+              <li><a href="#" class="button interact">make dancer interact</a></li>
+            </ul>
+          </nav>
+        </div>
     </div>
 
     <script src="src/init.js"></script>

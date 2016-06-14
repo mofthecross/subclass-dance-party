@@ -1,10 +1,15 @@
 var snoopDogDancer = function(top, left, timeBetweenSteps) {
+ this.top = top;
+ this.left = left;
+ this.timeBetweenSteps = timeBetweenSteps;
+ this.$node = $('<img class="snoopDancer" src="http://www.officialpsds.com/images/thumbs/snoop-dogg-psd4606.png"></img>');
+ makeDancer.call(this, top, left, timeBetweenSteps);
   
-  this.top = top;
-  this.left = left;
-  this.timeBetweenSteps = timeBetweenSteps;
-  makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<img class="snoopDancer dancer" src="http://www.officialpsds.com/images/thumbs/snoop-dogg-psd4606.png"></img>');
+  // this.top = top;
+  // this.left = left;
+  // this.timeBetweenSteps = timeBetweenSteps;
+  // makeDancer.call(this, top, left, timeBetweenSteps);
+  
 };
 
 snoopDogDancer.prototype = Object.create(makeDancer.prototype);
@@ -20,7 +25,7 @@ snoopDogDancer.prototype.step = function() {
     // toggle() is a jQuery method to show/hide the <span> tag.
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.fadeToggle();
+  // this.$node.toggle();
 };
 
 

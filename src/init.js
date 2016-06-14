@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.danceFunctions = [];
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -29,15 +30,21 @@ $(document).ready(function() {
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer.$node);
+    window.danceFunctions.push(dancer);
   });
+
 
 
   $('.lineUp').on('click', function(event) {
-
-    window.dancers.forEach(function(item) {
-      $(item).css({right: '50%'});
+    var sizeTop = 50;
+    window.danceFunctions.forEach(function(dancer) {
+      $(dancer).addClass('lineUp');
+      dancer.setPosition(sizeTop, window.innerWidth / 2)
     });
+
   });
+
+
 
 // changing background
 
@@ -46,15 +53,27 @@ $(document).ready(function() {
   });
 
 // //make dancer interact with each other;
-// $('interact').on('click', function() {
-//   var index = []
-//   var generateRandomIndex = function() {
-//     var generate = Math.floor(Math.random() * window.dancers.length + 1)
-//     index !== generate ? index = generate : index = generate++;
-//   }
-//   var dancer1 = window.dancers[randomIndex];
-//   var dancer2 = window.dancers[ramdomIndex];
-//   for (var i = 0; i < window.dancers.length; i+2)
-// })
+  $('.interact').on('click', function() {
+
+
+    var dancer = window.dancers;
+    var dancersP = [];
+    
+    // iterate over each dancer node
+    for (var i = 0; i < window.dancers.length; i++) {
+      // set dancers array[i] equal to [top, left] position of dancer
+      dancersP[i] = [dancer[i], dancer[i].offset().top, dancer[i].offset().left];
+    }
+    // now iterate over the array with all the positions
+    dancersP.forEach(function(element) {
+      console.log('hi');
+      if (Number(element[1]) < 500) {
+        console.log('inside');
+        $(element[0]).css("border", "green");
+      }
+    });
+    console.log(dancersP);
+    
+  });
 
 });
