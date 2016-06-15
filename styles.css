@@ -62,7 +62,7 @@ body, a:link, a:visited, a:active{
 }
 
 .lineUp {
-  display: block;
+  display: inline block;
   top: 0;
 /*  right: 50%;*/
 }
@@ -71,7 +71,13 @@ body, a:link, a:visited, a:active{
 
 .bounceClass {
   animation-name: bounce;
-  animation-duration: 10s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.jumpClass {
+  animation-name: bounce;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
@@ -91,6 +97,11 @@ body, a:link, a:visited, a:active{
   align-content: center;
 }
 
+.discoball {
+  display: block;
+  margin: 50px auto 30px auto;
+  position: relative;
+}
 
 .dropdown:hover .dropdown-menu {
   display: block;

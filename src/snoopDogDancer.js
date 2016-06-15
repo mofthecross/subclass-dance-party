@@ -30,7 +30,13 @@ snoopDogDancer.prototype.step = function() {
 
 snoopDogDancer.prototype.setPosition = function(top, left) {
   makeDancer.prototype.setPosition.call(this, top, left);
-}
+};
+
+snoopDogDancer.prototype.interact = function() {
+  this.$node.addClass("bounceClass");
+};
+
+
 
 
 

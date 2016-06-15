@@ -29,3 +29,8 @@ putinDancer.prototype.step = function() {
 putinDancer.prototype.setPosition = function(top, left) {
   makeDancer.prototype.setPosition.call(this, top, left);
 };
+
+putinDancer.prototype.interact = function() {
+  this.$node.addClass("bounceClass");
+};
+

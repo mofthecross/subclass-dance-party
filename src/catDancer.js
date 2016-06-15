@@ -27,5 +27,9 @@ catDancer.prototype.setPosition = function(top, left) {
   makeDancer.prototype.setPosition.call(this, top, left);
 };
 
+catDancer.prototype.interact = function() {
+  this.$node.addClass("bounceClass");
+};
+
 
 

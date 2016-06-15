@@ -33,3 +33,6 @@ makeDancer.prototype.lineUp = function() {
 };
 
 
+makeDancer.prototype.interact = function() {
+  this.$node.addClass("bounceClass");
+}

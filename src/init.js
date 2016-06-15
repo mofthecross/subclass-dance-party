@@ -58,11 +58,11 @@ $(document).ready(function() {
     var sizeTop = 50;
     window.danceFunctions.forEach(function(dancer) {
       if (dancer.constructor.name === 'catDancer') {
-        dancer.setPosition(window.innerHeight/2, 0);
+        dancer.setPosition(0, window.innerWidth / 4);
       } else if (dancer.constructor.name === 'putinDancer') {
-        dancer.setPosition(window.innerHeight, 100);
+        dancer.setPosition(0, window.innerWidth / 4);
       } else if (dancer.constructor.name === 'snoopDogDancer') {
-        dancer.setPosition(300, 130);
+        dancer.setPosition(0, window.innerWidth / 4);
       }
 
 
@@ -78,23 +78,30 @@ $(document).ready(function() {
 // changing background
 
   $('.disco').on('click', function() {
-    $('body').css({'background-image': ' url("http://i277.photobucket.com/albums/kk45/men_of_fire/DISCO.gif")'});
-    $('body').css({'background-image': ' url(http://www.cyborg-art.dk/Internet_Temp/the_crockett_club_final_2k.jpg)'});
+    $('body').css({'background-image': 'url("http://www.cyborg-art.dk/Internet_Temp/the_crockett_club_final_2k.jpg")'});
+    var discoball = $('<img class="discoball" src ="http://stardancer.net/wpimages/starball_w_stardancer.gif" height="200px"></img> ');
+    $('.holder').append(discoball);
   });
+  $('.tloin').on('click', function() {
+    $('body').css({'background-image': 'url("http://sfcitizen.com/blog/wp-content/uploads/2013/05/7J7C9263-copy.jpg")'});
+  });
+  $('.dc').on('click', function() {
+    $('body').css({'background-image': 'url("http://backgrounds4k.net/wp-content/uploads/2016/01/White-House-wallpaper.jpg")'});
+  });
+  $('.debate').on('click', function() {
+    $('body').css({'background-image': 'url("http://static.politico.com/2d/e8/1076edab470f9707a8f87ae11614/emptydebatestage.jpg")'});
+  });
+
+
 
 // //make dancer interact with each other;
   $('.interact').on('click', function() {
     window.danceFunctions.forEach(function(dancer) {
-      if (dancer.constructor.name === 'catDancer') {
-        dancer.setPosition(window.innerHeight / 2, 0);
-        $(dancer.node).toggle();
-      } else if (dancer.constructor.name === 'putinDancer') {
-        dancer.setPosition(window.innerHeight / 10, window.innerWidth / 10);
-      } else if (dancer.constructor.name === 'snoopDogDancer') {
-        dancer.setPosition(window.innerHeight/4, 0);
-      }
-      
+        dancer.setPosition(0, 0);
+        dancer.interact();
     });
+ 
+
   });
 
 });
