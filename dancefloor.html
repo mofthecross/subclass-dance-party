@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Object Dance Party</title>
-    
+    <title>USA Dance Party</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="animate.css" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="justified-nav.css">
+    <link rel="stylesheet" type="text/css" href="csshake.min.css">
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/snoopDogDancer.js"></script>
@@ -14,19 +15,37 @@
     <script src="src/putinDancer.js"></script>
   </head>
   <body>
+<!--   <div style='position:fixed;z-index:0;left:0;top:0;'>
+    <img class="bg" src="http://static.politico.com/2d/e8/1076edab470f9707a8f87ae11614/emptydebatestage.jpg" style='width:100%;height:100%'>
+    </div> -->
   <div class ="container">
        <div class="masthead">
-          <h3 class="text-muted">Politican Dance Party</h3>
+          <h3 class="text-muted">Party in the USA</h3>
           <nav>
             <ul class="nav nav-justified">
-              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="snoopDogDancer">add a Snoop dancer</a></li>
-              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="catDancer">add a kitty dancer</a></li>
-              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="putinDancer">add a Putin dancer</a></li>
-              <li><a href="#" class="button lineUp">Line up </a></li> 
-              <li><a href="#" class="button disco">change BG</a></li> 
-              <li><a href="#" class="button interact">make dancer interact</a></li>
+              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="snoopDogDancer">Add Hilary</a></li>
+              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="catDancer">Add Bernie</a></li>
+              <li><a href="#" class="button addDancerButton" data-dancer-maker-function-name="putinDancer">Add Putin</a></li>
+              <li><a href="#" class="button lineUp">Line them up</a></li> 
+                      
+              <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Change scene <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                          <li><a href="#" class="disco">Disco</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                    </ul>
+                </li>
+              <li><a href="#" class="button interact">Make them interact</a></li>
             </ul>
           </nav>
+          <div class="audio">
+          <div class="holder">
+            <audio controls autoplay id="a1">
+              <source src="partyintheusa.mp3" type="audio/mpeg">
+            </audio>
+            </div>
+          </div>
         </div>
     </div>
 

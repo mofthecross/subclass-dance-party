@@ -1,18 +1,21 @@
 body, html{
-  height:100%;
+/*  height:100%;*/
 
 }
 body{
   margin: 0px;
-  background-image: url("http://i52.tinypic.com/23s7tl0.jpg");
-  background-repeat: no-repeat;
+  background-image: url("http://static.politico.com/2d/e8/1076edab470f9707a8f87ae11614/emptydebatestage.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-);
-  font-size: 18px;
+  overflow: hidden;
+/*  max-height: 100%;
+  max-width: 648px;*/
 }
+
 body, a:link, a:visited, a:active{
   color: lightblue;
+
 }
 .title{
   padding:5px 12px;
@@ -24,7 +27,9 @@ body, a:link, a:visited, a:active{
   font-size: 70px;
   color: white;
   animation-name: swing;
-  animation-duration: 12s;}
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
 .topbar{
   height:32px;
   background-color: #555;
@@ -40,14 +45,16 @@ body, a:link, a:visited, a:active{
 .catDancer{
   position: relative;
   animation-name: wobble;
-  animation-duration: 20s;
+  animation-duration: 4s;
   animation-iteration-count: infinite;
 }
 
 .snoopDancer{
-  border:10px solid red;
-  border-radius:10px;
+  border-radius:200px;
   position:relative;
+  animation-name: tada;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 .putinDancer{
@@ -68,5 +75,26 @@ body, a:link, a:visited, a:active{
   animation-iteration-count: infinite;
 }
 
-/* classes for lining up dancers */
+.audio{
+  display: table;
+  width:100%;
+}
+
+.holder {
+
+  text-align: center;
+  display:table-cell;
+  vertical-align: middle;
+}
+#a1 {
+  padding-top: 60px;
+  align-content: center;
+}
+
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* nav bar */
 /**/
+

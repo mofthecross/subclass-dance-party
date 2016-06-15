@@ -1,9 +1,9 @@
 var snoopDogDancer = function(top, left, timeBetweenSteps) {
- this.top = top;
- this.left = left;
- this.timeBetweenSteps = timeBetweenSteps;
- this.$node = $('<img class="snoopDancer" src="http://www.officialpsds.com/images/thumbs/snoop-dogg-psd4606.png"></img>');
- makeDancer.call(this, top, left, timeBetweenSteps);
+   this.top = top;
+   this.left = left;
+   this.timeBetweenSteps = timeBetweenSteps;
+   this.$node = $('<img class="snoopDancer shake" src="http://i.imgur.com/qfRUpy5.png" height="150px"></img>');
+   makeDancer.call(this, top, left, timeBetweenSteps);
   
   // this.top = top;
   // this.left = left;
@@ -27,6 +27,10 @@ snoopDogDancer.prototype.step = function() {
     // other effects you can use on a jQuery-wrapped html tag.
   // this.$node.toggle();
 };
+
+snoopDogDancer.prototype.setPosition = function(top, left) {
+  makeDancer.prototype.setPosition.call(this, top, left);
+}
 
 
 

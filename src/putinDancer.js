@@ -2,7 +2,7 @@ var putinDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<img class="putinDancer dancer" src ="https://lh6.googleusercontent.com/-UsIw4WQLtJ0/VGNIWkWql7I/AAAAAAAARMc/NDu7vQo2LLk/w506-h750/putin.gif"></img> ');
+  this.$node = $('<img class="putinDancer dancer" src ="https://lh6.googleusercontent.com/-UsIw4WQLtJ0/VGNIWkWql7I/AAAAAAAARMc/NDu7vQo2LLk/w506-h750/putin.gif" height="180"></img> ');
   makeDancer.call(this, top, left, timeBetweenSteps);
 };
 
@@ -24,4 +24,8 @@ putinDancer.prototype.step = function() {
   // this.$node.toggle();
 
 
+};
+
+putinDancer.prototype.setPosition = function(top, left) {
+  makeDancer.prototype.setPosition.call(this, top, left);
 };

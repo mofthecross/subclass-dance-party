@@ -2,7 +2,7 @@ var catDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<img class="catDancer dancer" src ="http://4.bp.blogspot.com/-zT6FO4bjJpY/Ve2dL9abmJI/AAAAAAAAj5s/4P9BXXtdAqY/s1600/stretching_cat_cut_out.png" height="200px"></img> ');
+  this.$node = $('<img class="catDancer dancer" src ="http://www.bernbabybern.co/assets/img/dancing-bernie.gif" height="150px"></img> ');
   makeDancer.call(this, top, left, timeBetweenSteps);
 };
 
@@ -23,8 +23,8 @@ catDancer.prototype.step = function() {
   // this.$node.slideDown();
 };
 
-catDancer.prototype.setPosition = function() {
-  makeDancer.prototype.setPosition.call(this, window.innerHeight, window.innerWidth / 2  );
+catDancer.prototype.setPosition = function(top, left) {
+  makeDancer.prototype.setPosition.call(this, top, left);
 };
 
 
